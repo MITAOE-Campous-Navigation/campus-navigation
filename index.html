@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT Academy of Engineering - Campus Navigation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">MIT</div>
+    <div>
+        <h1>MIT Academy of Engineering</h1>
+        <p>Campus Navigation</p>
+    </div>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#search">Find Room</a>
+    <a href="#map">Campus Layout</a>
+    <a href="#facilities">Facilities</a>
+</nav>
+
+<section id="home" class="hero">
+    <div>
+        <h2>Find Your Classroom, Lab or Facility Easily</h2>
+        <p>Search the room number or choose a wing to find information from the college layout.</p>
+        <a class="main-btn" href="#search">Start Navigation</a>
+    </div>
+</section>
+
+<section id="search" class="section">
+    <h2>🔍 Find a Room</h2>
+
+    <div class="search-box">
+        <input id="searchInput" type="text"
+               placeholder="Example: A-105, D-202, H-301..."
+               onkeyup="searchRoom(event)">
+        <button onclick="searchRoom()">Search</button>
+    </div>
+
+    <div class="filters">
+        <button onclick="filterWing('All')">All</button>
+        <button onclick="filterWing('A WING')">A Wing</button>
+        <button onclick="filterWing('D WING')">D Wing</button>
+        <button onclick="filterWing('E WING')">E Wing</button>
+        <button onclick="filterWing('F WING')">F Wing</button>
+        <button onclick="filterWing('H WING')">H Wing</button>
+    </div>
+
+    <div id="result" class="result">
+        <h3>Search for a room</h3>
+        <p>Enter a room number such as <b>A-105</b> to see its details.</p>
+    </div>
+</section>
+
+<section id="map" class="section">
+    <h2>🗺️ Campus Navigation</h2>
+    <p class="note">
+        Classroom and facility information is based on the MIT Academy of Engineering
+        classroom and laboratory details provided in the reference PDFs.
+        Search a room number above to view its details.
+    </p>
+
+    <div class="map-actions">
+        <a target="_blank"
+           href="https://www.google.com/maps/search/?api=1&query=MIT+Academy+of+Engineering+Alandi+Pune">
+           📍 Open MITAOE in Google Maps
+        </a>
+    </div>
+</section>
+
+<section id="facilities" class="section">
+    <h2>🏫 Facility Types</h2>
+    <div class="cards">
+        <div class="card"><span>📚</span><h3>Classrooms</h3><p>Find classrooms by room number and wing.</p></div>
+        <div class="card"><span>💻</span><h3>Laboratories</h3><p>Search laboratory rooms from the layout data.</p></div>
+        <div class="card"><span>🎨</span><h3>Design Facilities</h3><p>Find design-related rooms and studios.</p></div>
+        <div class="card"><span>🛠️</span><h3>Workshops</h3><p>Find workshop facilities by room number.</p></div>
+    </div>
+</section>
+
+<footer>
+    <p>MIT Academy of Engineering, Alandi, Pune</p>
+    <p>Campus Navigation Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
